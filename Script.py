@@ -19,7 +19,6 @@ def load_birthdays():
 def schedule_notifications():
     today = datetime.date.today()
     birthdays = load_birthdays()
-
     for birthday, name in birthdays.items():
         month, day = map(int, birthday.split())
         birthday_date = datetime.date(today.year, month, day)
@@ -34,14 +33,8 @@ def schedule_notifications():
                 app_name='Birthday Reminder',
                 timeout=10,
             )
-engine=pyttsx3.init('sapi5')
-voices=engine.getProperty('voices')
-engine.setProperty('voice',voices[1].id)
-def speak(audio):
-    engine.say(audio)
-    engine.runAndWait()
 i=0
 while(i<2):
     schedule_notifications()
     i+=1
-speak("Birthday notification")
+pyttsx3.speak("Birthday notification")
