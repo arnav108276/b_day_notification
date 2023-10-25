@@ -23,7 +23,6 @@ def schedule_notifications():
         month, day = map(int, birthday.split())
         birthday_date = datetime.date(today.year, month, day)
         days_until_birthday = (birthday_date - today).days
-
         if days_until_birthday == 0:
             message = f"Today is {name}'s birthday! 🎉"
             notification.notify(
@@ -33,8 +32,5 @@ def schedule_notifications():
                 app_name='Birthday Reminder',
                 timeout=10,
             )
-i=0
-while(i<2):
-    schedule_notifications()
-    i+=1
-pyttsx3.speak("Birthday notification")
+schedule_notifications()
+pyttsx3.speak("        Birthday    notification")
