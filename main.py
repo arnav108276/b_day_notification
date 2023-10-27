@@ -31,6 +31,7 @@ def schedule_notifications():
         
         if days_until_birthday == 0:
             message = f"Today is {name}'s birthday! 🎉"
+            speak("Birthday notification")
             notification.notify(
                 title='Birthday Notification',
                 message=message,
@@ -67,6 +68,5 @@ if __name__ == "__main__":
         elif choice == '2':
             schedule_notifications()
             schedule_notifications()
-            speak("Birthday notification")
         elif choice.lower() == 'q':
             break
