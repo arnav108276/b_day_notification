@@ -1,16 +1,17 @@
-import datetime
+import datetime               
 import json
 import mysql.connector
 from plyer import notification
 import pyttsx3
 
+#install all above used libraryusing pip install 'Library'
+
 DB_CONFIG = {
     'host': 'localhost',
     'user': 'root',
-    'password': 'passkey=00',
-    'database': 'devops',
+    'password': '*******',    # Enter your own password
+    'database': 'devops',     #Name of database if change you must also rename in sql database
     }
-
 BIRTHDAYS_FILE = 'birthdays.json'
 def load_birthdays():
     try:
@@ -18,8 +19,6 @@ def load_birthdays():
             return json.load(file)
         except FileNotFoundError:
         return {}
-
-
 def schedule_notifications():
     today = datetime.date.today()
      birthdays = load_birthdays()
@@ -30,18 +29,15 @@ def schedule_notifications():
         days_until_birthday = (birthday_date - today).days
 
         if days_until_birthday == 0:
-             message = f"Today is {name}'s birthday! 🎉"
+             message = f"Today is {name}'s birthday! 🎉"  # Message to be printed
              speak("Birthday notification")
              notification.notify(
-                
                 title='Birthday Notification',
                 message=message,
                 app_icon="C:\\Users\\Arnav\\OneDrive\\Documents\\cake.ico",
                 app_name='Birthday Reminder',
                 timeout=10,
             )     
-
-
 def add_birthday():
     month = int(input("Enter the month (1-12): "))
     day = int(input("Enter the day (1-31): "))
