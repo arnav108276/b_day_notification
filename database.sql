@@ -10,3 +10,5 @@ CREATE TABLE birthday_data (
     day INT,
     sms VARCHAR(10)
 );
+
+#Run these three queries one by one in mysql 
