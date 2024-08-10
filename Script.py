@@ -3,7 +3,6 @@ import json
 import mysql.connector
 from plyer import notification
 import pyttsx3
-
 DB_CONFIG = {
     'host': 'localhost',
     'user': 'root',
