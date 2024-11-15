@@ -1,7 +1,8 @@
 # B_day_notification
 
 ## Output
-![image](https://github.com/user-attachments/assets/4310ece7-d0df-4f73-8322-3269e0ae34f1)
+![image](https://github.com/user-attachments/assets/6a10dfbb-32a9-4966-8847-d8b91ba4592e)
+
 ## Glipse of database
 ![image](https://github.com/user-attachments/assets/9d31cae7-b77b-4ac7-9d5d-885e0188a0ba)
 
